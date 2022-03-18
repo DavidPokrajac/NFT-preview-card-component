@@ -131,7 +131,6 @@ strong:hover {
     color: var(--primaryColorTwo);
     cursor: pointer;
 }
-
 hr {
     width: 100%;
     color: var(--lineColor);
