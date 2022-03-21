@@ -15,8 +15,8 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     margin: 0;
     background-color: var(--mainBgColor);
     display: flex;
@@ -29,7 +29,6 @@ body {
 
 main {
     width: 20%;
-    height: 65%;
     background-color: var(--cardBgColor);
     padding: 1rem;
     border-radius: 0.75rem;
@@ -46,7 +45,7 @@ main {
 
 .main-picture img {
     height: auto;
-    width: 100%;
+    max-width: 100%;
     border-radius: 0.5rem;
     aspect-ratio: 4 / 3;
 }
@@ -81,31 +80,40 @@ main {
 .info {
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
 }
 
-.info span {
+.info li {
     display: flex;
     justify-content: flex-start;
 }
 
-.info span:first-child {
+.info li:first-child {
     color: var(--primaryColorTwo);
 }
 
-.info span figure {
+.info li figure {
     margin: 0 0.5rem;
+}
+
+.info li p {
+    margin: 0;
 }
 
 p.description {
     line-height: 1.5rem;
 }
 
-footer {
+.footer {
     display: flex;
     align-items: center;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 2px solid var(--lineColor);
 }
 
-footer figure {
+.footer figure {
     margin: 0;
     border: 1px solid var(--textColor);
     border-radius: 50%;
@@ -113,27 +121,24 @@ footer figure {
     height: 35px;
 }
 
-footer img {
+.footer img {
     width: 100%;
     height: auto;
 }
 
-footer span {
+.footer p {
     margin-left: 1rem;
 }
 
-strong {
+a {
+    text-decoration: none;
     color: var(--textColor);
     font-weight: 400;
 }
 
-strong:hover {
+a:hover {
     color: var(--primaryColorTwo);
     cursor: pointer;
-}
-hr {
-    width: 100%;
-    color: var(--lineColor);
 }
 
 @media (max-width: 820px) {
